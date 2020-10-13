@@ -1,20 +1,21 @@
 import XCTest
 @testable import RazerCore
 
-final class RazerCoreTests: XCTestCase {
+final class RazerColorTests: XCTestCase {
+    
     func testColorRedEqual() {
-        let color = RazerCore.colorFromHexString("FF0000")
+        let color = RazerCore.Color.fromHexString("FF0000")
         XCTAssertEqual(color, .red)
     }
     
     func testRazerColorsAreEqual() {
-        let color = RazerCore.colorFromHexString("006736")
-        XCTAssertEqual(color, RazerCore.razeColor)
+        let color = RazerCore.Color.fromHexString("006736")
+        XCTAssertEqual(color, RazerCore.Color.razeColor)
     }
     
     func testSecondaryRazerColorsAreEqual() {
-        let color = RazerCore.colorFromHexString("FCFFFD")
-        XCTAssertEqual(color, RazerCore.secondaryRazeColor)
+        let color = RazerCore.Color.fromHexString("FCFFFD")
+        XCTAssertEqual(color, RazerCore.Color.secondaryRazeColor)
     }
 
     static var allTests = [
